@@ -15,6 +15,7 @@ provider "aws" {
 
 module "web-server" {
   source ="./web-server"
+
   instance_type     = var.instance_type
   instance_key      = var.instance_key
   public_subnet_id  = module.network.public_subnet_id_1a
@@ -24,6 +25,7 @@ module "web-server" {
 
 module "network"{
   source = "./network"
+
   vpc_cidr            = var.vpc_cidr
   public_subnet_cidr  = var.public_subnet_cidr1
   public_subnet_cidr2 = var.public_subnet_cidr2
@@ -39,3 +41,5 @@ module "network"{
 # module "load-balancer"{
 #   source = "./load-balancer"
 # }
+=======
+}

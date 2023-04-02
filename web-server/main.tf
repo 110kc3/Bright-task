@@ -7,6 +7,7 @@ resource "aws_instance" "web-server" {
   subnet_id       = var.public_subnet_id
   security_groups = [var.security_group_id]
 
+
   associate_public_ip_address = true
   user_data                   = file("user_data/vm-configuration.tpl")
 
