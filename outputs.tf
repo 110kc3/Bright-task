@@ -6,3 +6,7 @@ output "web_server_public_ip" {
 
 
 
+output "load_balancer_dns_name" {
+  value       = module.load-balancer.load_balancer_dns_name
+  description = "DNS name of the load balancer"
+}

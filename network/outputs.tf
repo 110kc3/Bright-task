@@ -10,3 +10,8 @@ output "sg_id" {
   value = aws_security_group.sg.id
   description = "The ID of the security group created in the network module"
 }
+
+output "vpc_id" {
+  value       = aws_vpc.app_vpc.id
+  description = "The ID of the created VPC"
+}

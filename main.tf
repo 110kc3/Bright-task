@@ -38,6 +38,11 @@ module "network"{
 #   source = "./database"
 # }
 
-# module "load-balancer"{
-#   source = "./load-balancer"
-# }
+module "load-balancer"{
+  source = "./load-balancer"
+
+  public_subnet_id_1 = module.network.public_subnet_id_1a
+  public_subnet_id_2 = module.network.public_subnet_id_1b
+  vpc_id             = module.network.vpc_id
+  web_server_id      = module.web-server.instance_id
+}
