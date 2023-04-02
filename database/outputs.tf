@@ -1,0 +1,4 @@
+output "db_endpoint" {
+  value       = aws_db_instance.app_db.endpoint
+  description = "The database endpoint."
+}

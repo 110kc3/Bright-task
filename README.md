@@ -1,13 +1,11 @@
 # Bright-task
 Infrastructure deployment automation script(s) using Terraform on the AWS platform. This configuration includes:
 
-1. An Application Load Balancer (ALB) with a target group and listener. (loadbalancer.tf)
-2. An EC2 instance running the Apache HTTP server on Ubuntu 22.04 (web-server-vm.tf)
+1. An Application Load Balancer (ALB) with a target group and listener. (load-balancer module)
+2. An EC2 instance running the Apache HTTP server on Ubuntu 22.04 (web-server module)
+3. An RDS instance with a MySQL database. (database module) 
 
-### This part is not finished
-3. An RDS instance with a MySQL database. (db.tf) 
 I was not sure on how show easily database connection from web-server
-
 Next step would be to figure it out, propably implementing mysql client in the webserver (updating vm-configuration.tpl - commented code)
 
 4. An Amazon SQS queue for messaging. (sqs.tf)

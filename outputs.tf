@@ -10,3 +10,9 @@ output "load_balancer_dns_name" {
   value       = module.load-balancer.load_balancer_dns_name
   description = "DNS name of the load balancer"
 }
+
+# display the database endpoint
+output "db_endpoint" {
+  value       = module.database.db_endpoint
+  description = "The database endpoint."
+}

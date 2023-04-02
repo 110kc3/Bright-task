@@ -34,9 +34,11 @@ module "network"{
 
 }
 
-# module "database"{
-#   source = "./database"
-# }
+module "database"{
+  source = "./database"
+  subnet_ids = [module.network.public_subnet_id_1a, module.network.public_subnet_id_1b]
+  security_group_id = module.network.sg_id
+}
 
 module "load-balancer"{
   source = "./load-balancer"
