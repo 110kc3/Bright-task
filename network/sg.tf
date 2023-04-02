@@ -35,3 +35,4 @@ resource "aws_security_group" "sg" {
     Name = "allow_ssh_http"
   }
 }
+
